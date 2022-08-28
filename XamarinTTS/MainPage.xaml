@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinTTS.MainPage">
+
+    <StackLayout VerticalOptions="Center"
+                 HorizontalOptions="FillAndExpand">
+
+        <Editor Text="Text to Speech Conversion using Xamarin Essentials"
+                Margin="10,0,10,0"
+                x:Name="entry_tts"
+                WidthRequest="300"
+                HorizontalOptions="Center"
+                HeightRequest="100"/>
+
+        <StackLayout HorizontalOptions="Center"
+                     Orientation="Vertical">
+            <Label Text="Volume"
+                   VerticalOptions="Center"
+                   HorizontalOptions="Start"/>
+            <Slider HorizontalOptions="Center"
+                    VerticalOptions="Center"
+                    Value="1"
+                    ThumbColor="Chocolate"
+                    MinimumTrackColor="Chocolate"
+                    MaximumTrackColor="Chocolate"
+                    WidthRequest="200"
+                    x:Name="volume"/>
+        </StackLayout>
+
+        <StackLayout HorizontalOptions="Center"
+                     Orientation="Vertical">
+            <Label Text="Pitch"
+                   VerticalOptions="Center"
+                   HorizontalOptions="Start"/>
+            <Slider HorizontalOptions="Center"
+                    VerticalOptions="Center"
+                    Value="1"
+                    ThumbColor="Chocolate"
+                    MinimumTrackColor="Chocolate"
+                    MaximumTrackColor="Chocolate"
+                    WidthRequest="200"
+                    x:Name="pitch"/>
+        </StackLayout>
+
+        <Button FontSize="16" 
+                Padding="10,0,10,0"
+                Text="Convert"
+                Margin="10,0,10,0"
+                WidthRequest="200"
+                HorizontalOptions="Center"
+                Clicked="ConvertClicked"/>
+
+    </StackLayout>
+
+</ContentPage>
